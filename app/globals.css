@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: url("/fonts/YekanBakh.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #f4f7f5;
+  --fg: #07100d;
+  --muted: #66736e;
+  --line: rgba(7, 16, 13, .12);
+  --panel: rgba(255,255,255,.72);
+  --accent: #079c72;
+  --aqua: #009e9a;
+  --danger: #8d3036;
+}
+
+.dark {
+  --bg: #0a0f0d;
+  --fg: #edf8f3;
+  --muted: #91a39c;
+  --line: rgba(237,248,243,.12);
+  --panel: rgba(17, 27, 23, .64);
+  --accent: #21d39a;
+  --aqua: #28d8d0;
+  --danger: #b43c45;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 75% 5%, rgba(33,211,154,.07), transparent 25rem),
+    var(--bg);
+  color: var(--fg);
+  font-family: var(--font-inter), Arial, sans-serif;
+  transition: background .25s ease, color .25s ease;
+}
+.dark body { background-color: #0a0f0d; }
+
+::selection { background: rgba(33,211,154,.24); }
+
+.grid-bg {
+  background-image: linear-gradient(to right, var(--line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.glass {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+}
+
+.reveal-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: .55;
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, var(--accent), var(--aqua));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-word {
+  font-size: clamp(4.8rem, 17vw, 15rem);
+  line-height: .78;
+  letter-spacing: -.075em;
+  font-weight: 650;
+}
+
+.toptobottom{
+  position: relative;
+  top: 4rem;
+  
+}
+
+.rtl {
+  direction: rtl;
+  font-family: "Yekan Bakh", Arial, sans-serif;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+button, a { -webkit-tap-highlight-color: transparent; }
+
+::-webkit-scrollbar { width: 9px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 99px; }
+
