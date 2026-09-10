@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'VazirmatnBold';
+  src: url('/fonts/Vazirmatn-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
   font-family: "Yekan Bakh";
@@ -100,4 +107,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 ::-webkit-scrollbar { width: 9px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--line); border-radius: 99px; }
+
+
+.vazirmatn-bold {
+  font-family: 'VazirmatnBold', sans-serif;
+  font-size: 12rem;
+}
 

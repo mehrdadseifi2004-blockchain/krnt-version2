@@ -171,7 +171,9 @@ const handleCopyAddress = async () => {
             <span className="h-px w-10 bg-[var(--accent)]"/> {t.kicker}
           </motion.div>
           <motion.h1 initial={{opacity:0,y:35}} animate={{opacity:1,y:0}} transition={{duration:.8,delay:.08}} className="hero-word max-w-[1300px] uppercase">
-            <span className="text-gradient">{t.hero}</span>
+          <span className="text-gradient vazirmatn-bold">
+  {t.hero}
+</span>
           </motion.h1>
           <div className="mt-12 grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
             <p className="max-w-2xl text-xl leading-relaxed text-[var(--muted)] md:text-2xl">{t.sub}</p>
