@@ -111,6 +111,20 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .vazirmatn-bold {
   font-family: 'VazirmatnBold', sans-serif;
-  font-size: 12rem;
+  font-weight: 700;
+}
+
+.hero-persian {
+  font-size: clamp(3.8rem, 11vw, 11rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+@media (max-width: 768px) {
+  .hero-persian {
+    font-size: clamp(3rem, 12vw, 5rem);
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+  }
 }
 
